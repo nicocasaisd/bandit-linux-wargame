@@ -19,12 +19,8 @@ grep -n millionth data.txt
 grep [OPTION...] PATTERNS [FILE...]
 ```
 
-* Usamos grep para encontrar la línea que contiene la palabra 'milliionth':
+* Usamos grep para encontrar la línea que contiene la palabra 'milliionth'
 
-
-
-
-```
 
 * Nos devuelve:
 
