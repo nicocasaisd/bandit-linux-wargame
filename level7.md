@@ -12,7 +12,7 @@ Password: ```P4L4vucdmLnm8I7Vl7jG1ApGSfjYKqJU```
 ``` 
 find / -type f -size 33c -user bandit7 -group bandit6 2>/dev/null
 ```
-### Usamos find pasandole varios argumentos:
+1. Usamos find pasandole varios argumentos:
 ```-type f``` : Archivos (file)
 
 ```-size 33c``` : Tamaño 33 bytes
@@ -25,13 +25,13 @@ El comando
 ```2>/dev/null``` 
 nos exceptua los mensajes de error por permiso denegado.
 
-### Usamos cat para mostrar la password:
+2. Usamos cat para mostrar la password:
 
 ```
 cat /var/lib/dpkg/info/bandit7.password
 ```
 
-Nos devuelve:
+3. Nos devuelve:
 
 
 ```z7WtoNQU2XfjmMtWA8u5rN4vzqu4v99S```
