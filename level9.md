@@ -10,7 +10,7 @@ Password: ```TESKZC0XvTetK0S9xNwm25STk5iWrBvP```
 
 
 ``` 
-grep -n millionth data.txt
+sort data.txt | uniq -u
 ```
 
 ## Piping and Redirecting
@@ -72,12 +72,13 @@ uniq [OPTION] [INPUT[OUTPUT]]
 
 Options:
 + -u – -unique : It allows you to print only unique lines.
-+  -c – -count : It tells how many times a line was repeated by displaying a number as a prefix with the line.
++ -c – -count : It tells how many times a line was repeated by displaying a number as a prefix with the line.
++ -d – -repeated : It only prints the repeated lines and not the lines which aren’t repeated.
 
 * Nos devuelve:
 
 ```
-ls | head -3
+EN632PlfYiZbn3PhVK3XOGSlNInNE00t
 ```
 
 ``````
