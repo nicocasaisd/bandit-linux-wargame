@@ -50,20 +50,34 @@ ls -l video.mpg blah.foo 2> errors.txt
 ```
 
 * Piping
+
 Piping is a mechanism for sending data from one program to another. The operator we use is ( | ).
 What this operator does is feed the output from the program on the left as input to the program on the right.
 
-``` 
-grep [OPTION...] PATTERNS [FILE...]
+```
+ls | head -3
 ```
 
-* Usamos grep para encontrar la línea que contiene la palabra 'milliionth'
+## Comando Uniq
 
+The uniq command in Linux is a command-line utility that reports or filters out the repeated lines in a file. 
+In simple words, uniq is the tool that helps to detect the adjacent duplicate lines and also deletes the duplicate lines. 
+Note: uniq isn’t able to detect the duplicate lines unless they are adjacent to each other. The content in the file must be therefore sorted before using uniq
+
+* Sintaxis:
+
+``` 
+uniq [OPTION] [INPUT[OUTPUT]]
+```
+
+Options:
++ -u – -unique : It allows you to print only unique lines.
++  -c – -count : It tells how many times a line was repeated by displaying a number as a prefix with the line.
 
 * Nos devuelve:
 
 ```
-
+ls | head -3
 ```
 
 ``````
