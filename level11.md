@@ -1,4 +1,4 @@
-# OverTheWire Bandit Level 9 -> 10
+# OverTheWire Bandit Level 10 -> 11
 
 ## Login 
 
