@@ -24,19 +24,20 @@ Hexdumps are often used when we want to look at data that cannot be represented 
 mkdir /tmp/nico
 cp -v data.txt /tmp/nico/data.txt
 cd /tmp/nico
-mv data.txt mi_data.txt
+mv data.txt hexdump_data
 ```
 
-* Sintaxis:
+* Mostramos la data hexadecimal
 
 ``` 
-
+cat hexdump_data
 ```
 
-Por ejemplo, para cambiar letras minúsculas por mayúsculas:
+Los primeros caracteres corresponden a la firma del archivo.
+Podemos buscar a qué tipo de archivo corresponde en una lista como [esta](https://en.wikipedia.org/wiki/List_of_file_signatures)
 
 ```
-tr 'a-z' 'A-Z'
+1f 8b
 ```
 
 
