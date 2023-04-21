@@ -21,5 +21,13 @@ Usamos find pasandole varios argumentos:
 
 ```-group bandit6``` :  Propiedad del grupo bandit7
 
+Usamos cat para mostrar la password:
 
-```cat /var/lib/dpkg/info/bandit7.password```
+```
+cat /var/lib/dpkg/info/bandit7.password
+```
+
+Nos devuelve:
+
+
+```z7WtoNQU2XfjmMtWA8u5rN4vzqu4v99S```
