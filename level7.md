@@ -23,7 +23,7 @@ find / -type f -size 33c -user bandit7 -group bandit6 2>/dev/null
 
 El comando 
 ```2>/dev/null``` 
-nos exceptua los mensajes de error por permiso denegado.
+nos exceptua los mensajes de error por permiso denegado. En realidad, redirecciona el STDERR a un archivo cualquiera
 
 * Usamos cat para mostrar la password:
 

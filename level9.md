@@ -30,10 +30,26 @@ The way the mechanism works, the file is created first (if it does not exist alr
 We can instead get the new data to be appended to an existing file by using the double greater than operator ( >> ).
 
 ```
-ls > myoutput
+ls >> myoutput
 ```
 
 * Redirecting from a File
+
+If we use the less than operator ( < ) then we can send data the other way. We will read data from the file and feed it into the program via it's STDIN stream.
+
+```
+wc -l < myoutput
+```
+
+* Redirecting STDERR
+
+STDERR is stream number 2 and we may use these numbers to identify the streams. If we place a number before the > operator then it will redirect that stream (if we don't use a number, like we have been doing so far, then it defaults to stream 1).
+
+```
+ls -l video.mpg blah.foo 2> errors.txt
+```
+
+* Piping
 
 
 
@@ -46,5 +62,8 @@ grep [OPTION...] PATTERNS [FILE...]
 
 * Nos devuelve:
 
+```
+
+```
 
 ``````
