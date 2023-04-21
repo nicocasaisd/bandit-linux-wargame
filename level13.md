@@ -10,7 +10,7 @@ Password: ```JVNBBFSmZwKKOP0XbFXOoW8chDz5yVRv```
 
 
 ``` 
-
+ver abajo
 
 ```
 
@@ -34,10 +34,41 @@ cat hexdump_data
 ```
 
 Los primeros caracteres corresponden a la firma del archivo.
-Podemos buscar a qué tipo de archivo corresponde en una lista como [esta](https://en.wikipedia.org/wiki/List_of_file_signatures)
+Podemos buscar a qué tipo de archivo corresponde en una lista como [esta].(https://en.wikipedia.org/wiki/List_of_file_signatures)
 
 ```
 1f 8b
+```
+Encontramos que esto pertenece a un archivo comprimido con GZIP.
+
+Lo descomprimimos usando 
+```
+gzip -d compressed_data.gz
+```
+
+Como sigue siendo ilegible, asumimos que se encuentra comprimido otra vez.
+Hacemos un Hexadump para ver nuevamente de qué tipo de archivo se trata.
+```
+xxd compressed_data 
+```
+Y vemos que los caracteres ``` 42 5A 68 ``` coinciden con el tipo de archivo Bzip2, otro compresor.
+
+# Empieza una ronda de descompresiones de muchos formatos
+
+```
+bzip2 -d compressed_data
+xxd compressed_data.out
+mv compressed_data.out compressed_data.gz
+gzip -d compressed_data.gz 
+mv compressed_data compressed_data.tar
+tar -xf compressed_data.tar
+tar -xf data5.bin 
+bzip2 -d data6.bin
+tar -xf data6.bin.out
+cp data8.bin data8.gz
+gzip -d data8.gz
+cat data8
+
 ```
 
 
@@ -45,7 +76,7 @@ Podemos buscar a qué tipo de archivo corresponde en una lista como [esta](https
 # Output Password
 
 ```
-JVNBBFSmZwKKOP0XbFXOoW8chDz5yVRv
+wbWdlBxEir4CaE8LaPhauuOo6pwRmrDw
 ```
 
 ``````
