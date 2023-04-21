@@ -50,8 +50,8 @@ ls -l video.mpg blah.foo 2> errors.txt
 ```
 
 * Piping
-
-
+Piping is a mechanism for sending data from one program to another. The operator we use is ( | ).
+What this operator does is feed the output from the program on the left as input to the program on the right.
 
 ``` 
 grep [OPTION...] PATTERNS [FILE...]
