@@ -1,5 +1,5 @@
-<h1> OverTheWire Bandit Level 6 -> 7 - Walkthrough </h1>
+# OverTheWire Bandit Level 6 -> 7 - Walkthrough 
 
-<h2> Login </h2>
+## Login 
 
-# This is an H1
+
