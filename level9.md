@@ -21,9 +21,17 @@ Piping and redirection is the means by which we may connect these streams betwee
 
 The greater than operator ( > ) indicates to the command line that we wish the programs output (or whatever it sends to STDOUT) to be saved in a file instead of printed to the screen.
 
+```
+ls > myoutput
+```
+
 The way the mechanism works, the file is created first (if it does not exist already) and then the program is run and output saved into the file.
 
 We can instead get the new data to be appended to an existing file by using the double greater than operator ( >> ).
+
+```
+ls > myoutput
+```
 
 * Redirecting from a File
 
