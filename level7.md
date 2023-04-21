@@ -1,4 +1,4 @@
-# OverTheWire Bandit Level 6 -> 7 - Walkthrough 
+# OverTheWire Bandit Level 6 -> 7
 
 ## Login 
 
@@ -20,6 +20,10 @@ Usamos find pasandole varios argumentos:
 ```-user bandit``` : Propiedad del usuario bandit7
 
 ```-group bandit6``` :  Propiedad del grupo bandit7
+
+El comando 
+```2>/dev/null``` 
+nos exceptua los mensajes de error por permiso denegado.
 
 Usamos cat para mostrar la password:
 
