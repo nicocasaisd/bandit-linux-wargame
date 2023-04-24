@@ -27,65 +27,32 @@ cat ~/sshkey.private
 
 Until now, we have only logged into the remote machine using ssh with a password. An alternative to a password is using public-key cryptography. The public key is placed on the computers that should allow access (the remote host) to the user that owns the private key. Like with the password, it is important that only the user knows/owns the private key. The -i flag allows login with the private key.
 
-## Crear directorio, mover y renombrar
+## Obtener la key usando scp
+
+* Sintaxis del comando scp
 
 ``` 
-mkdir /tmp/nico
-cp -v data.txt /tmp/nico/data.txt
-cd /tmp/nico
-mv data.txt hexdump_data
+scp -P <port> <user>@<IP>:<remotefilepath> <localfilepath>
 ```
-
-* Mostramos la data hexadecimal
+Desde nuestro ordenador ejecutamos el comando:
 
 ``` 
-cat hexdump_data
+scp -P 2220 bandit13@bandit.labs.overthewire.org:sshkey.private .
 ```
 
-Los primeros caracteres corresponden a la firma del archivo.
-Podemos buscar a qué tipo de archivo corresponde en una lista como [esta].(https://en.wikipedia.org/wiki/List_of_file_signatures)
+Y así obtenemos el archivo ```sshkey.private```.
+
+Además, debemos cambiar los permisos del archivo porque sino nos tira un error por estar demasiado abierto.
 
 ```
-1f 8b
-```
-Encontramos que esto pertenece a un archivo comprimido con GZIP.
-
-Lo descomprimimos usando 
-```
-gzip -d compressed_data.gz
+chmod 700 sshkey.private
 ```
 
-Como sigue siendo ilegible, asumimos que se encuentra comprimido otra vez.
-Hacemos un Hexadump para ver nuevamente de qué tipo de archivo se trata.
-```
-xxd compressed_data 
-```
-Y vemos que los caracteres ``` 42 5A 68 ``` coinciden con el tipo de archivo Bzip2, otro compresor.
+## Login usando ssh -i
 
-# Empieza una ronda de descompresiones de muchos formatos
-
+Nos logueamos usando el identity file. Para eso debemos ejecutar la bandera -i que nos habilita a usar un archivo de identidad.
 ```
-bzip2 -d compressed_data
-xxd compressed_data.out
-mv compressed_data.out compressed_data.gz
-gzip -d compressed_data.gz 
-mv compressed_data compressed_data.tar
-tar -xf compressed_data.tar
-tar -xf data5.bin 
-bzip2 -d data6.bin
-tar -xf data6.bin.out
-cp data8.bin data8.gz
-gzip -d data8.gz
-cat data8
-
+ssh -i sshkey.private bandit14@bandit.labs.overthewire.org -p 2220
 ```
 
-
-
-# Output Password
-
-```
-wbWdlBxEir4CaE8LaPhauuOo6pwRmrDw
-```
-
-``````
+Y así ingresamos al servidor. :)
