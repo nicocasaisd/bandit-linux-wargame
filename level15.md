@@ -28,13 +28,6 @@ jN2kgmIXJ6fShzhT2avhotn4Zcka6tnt
 
 ```
 
-## Miramos los permisos de los archivos
-
-```
-ls -l /etc/bandit_pass/
-
-cat ~/sshkey.private 
-```
 
 
 Y así ingresamos obtenemos la contraseña del siguiente nivel. :)
