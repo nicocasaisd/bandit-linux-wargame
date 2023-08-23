@@ -1,21 +1,9 @@
 
+# Bandit War Games
 
-#2->3
+https://overthewire.org/wargames/bandit/
 
-rRGizSaX8Mk1RTb1CNQoXTcYZWU6lgzi
+El juego consiste en una serie de niveles donde debemos ingresar a un servidor y obtener la contraseña del siguiente nivel resolviendo un problema a través de comandos de Linux.
 
-#3
+Cada archivo ```.md``` (markdown) describe la teoría detrás del problema y la solución desarrollada para resolverlo. 
 
-aBZ0W5EmUfAf7kHTQeOwd8bauFJ2lAiG
-
-#4
-2EW7BBsr6aMMoJ2HjW067dm8EgX26xNe
-
-#5
-lrIWWI6bB37kxfiCQZqUdOIYfr6eEeqR
-
-#6
-P4L4vucdmLnm8I7Vl7jG1ApGSfjYKqJU
-
-#7
-z7WtoNQU2XfjmMtWA8u5rN4vzqu4v99S
